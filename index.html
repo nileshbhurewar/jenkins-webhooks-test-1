@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nilesh Photography</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7fafc;
+        }
+        .gallery-image {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            cursor: pointer;
+        }
+        .gallery-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-lg p-4 sticky top-0 z-50">
+        <nav class="container mx-auto flex justify-between items-center flex-wrap">
+            <a href="#" class="text-2xl font-bold text-gray-900">Nilesh</a>
+            <div class="space-x-4 hidden md:flex">
+                <a href="#about" class="text-gray-600 hover:text-gray-900 transition-colors">About</a>
+                <a href="#portfolio" class="text-gray-600 hover:text-gray-900 transition-colors">Portfolio</a>
+                <a href="#contact" class="text-gray-600 hover:text-gray-900 transition-colors">Contact</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-gray-900 transition-colors focus:outline-none">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </nav>
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white mt-2 p-4 rounded-lg shadow-md">
+            <a href="#about" class="block py-2 text-gray-600 hover:text-gray-900 transition-colors border-b border-gray-200">About</a>
+            <a href="#portfolio" class="block py-2 text-gray-600 hover:text-gray-900 transition-colors border-b border-gray-200">Portfolio</a>
+            <a href="#contact" class="block py-2 text-gray-600 hover:text-gray-900 transition-colors">Contact</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-cover bg-center h-screen flex items-center justify-center text-white" style="background-image: url('https://images.unsplash.com/photo-1510125594191-c67d710d9f4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80');">
+        <div class="bg-black bg-opacity-50 p-8 rounded-lg text-center mx-4">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-4">Nilesh Photography</h1>
+            <p class="text-lg md:text-xl max-w-2xl mx-auto mb-6">Capturing moments, telling stories. Explore my world through the lens.</p>
+            <a href="#portfolio" class="bg-white text-gray-900 px-6 py-3 rounded-full font-bold hover:bg-gray-200 transition-colors shadow-lg">View Portfolio</a>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2 flex justify-center md:justify-start">
+                    <img src="Nileshimg.jpg" alt="Nilesh" class="rounded-full shadow-lg w-48 h-48 md:w-64 md:h-64 object-cover border-4 border-gray-200 transform hover:scale-105 transition-transform duration-300">
+                </div>
+                <div class="md:w-1/2 text-center md:text-left">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">About Me</h2>
+                    <p class="text-lg text-gray-600 mb-4">
+                        Hello! I'm Nilesh, a passionate photographer based in India. My journey began with a simple camera and a desire to capture the world's beauty, from breathtaking landscapes to intimate portraits. I believe that every photograph has a story to tell, and I strive to create images that evoke emotion and leave a lasting impression.
+                    </p>
+                    <p class="text-lg text-gray-600">
+                        I specialize in portrait and landscape photography, always seeking to find the perfect light and composition. I love working with people to capture their unique personalities and with nature to immortalize its fleeting moments. Thank you for visiting my portfolio. I hope you enjoy the collection of my work.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-16 md:py-24 bg-gray-100">
+        <div class="container mx-auto px-4 md:px-8">
+            <h2 class="text-4xl font-bold text-center text-gray-900 mb-12">My Portfolio</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Gallery Item 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden gallery-image">
+                    <img src="https://images.unsplash.com/photo-1540608595995-1e35f79a9244?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1935&q=80" alt="Landscape" class="w-full h-64 object-cover">
+                    <div class="p-4 text-center">
+                        <h3 class="text-lg font-bold text-gray-900">Vibrant Cityscape</h3>
+                        <p class="text-sm text-gray-500">Urban Photography</p>
+                    </div>
+                </div>
+                <!-- Gallery Item 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden gallery-image">
+                    <img src="https://images.unsplash.com/photo-1533085223000-84c26425c276?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1935&q=80" alt="Portrait" class="w-full h-64 object-cover">
+                    <div class="p-4 text-center">
+                        <h3 class="text-lg font-bold text-gray-900">Candid Portrait</h3>
+                        <p class="text-sm text-gray-500">Portrait Photography</p>
+                    </div>
+                </div>
+                <!-- Gallery Item 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden gallery-image">
+                    <img src="https://images.unsplash.com/photo-1560934988-c7e0c4b699c8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1935&q=80" alt="Nature" class="w-full h-64 object-cover">
+                    <div class="p-4 text-center">
+                        <h3 class="text-lg font-bold text-gray-900">Mystical Forest</h3>
+                        <p class="text-sm text-gray-500">Nature Photography</p>
+                    </div>
+                </div>
+                <!-- Gallery Item 4 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden gallery-image">
+                    <img src="https://images.unsplash.com/photo-1558980394-1b3240217983?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1935&q=80" alt="Road Trip" class="w-full h-64 object-cover">
+                    <div class="p-4 text-center">
+                        <h3 class="text-lg font-bold text-gray-900">Desert Road Trip</h3>
+                        <p class="text-sm text-gray-500">Travel Photography</p>
+                    </div>
+                </div>
+                <!-- Gallery Item 5 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden gallery-image">
+                    <img src="https://images.unsplash.com/photo-1561730030-91c6e11894a7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1935&q=80" alt="Food" class="w-full h-64 object-cover">
+                    <div class="p-4 text-center">
+                        <h3 class="text-lg font-bold text-gray-900">Morning Coffee</h3>
+                        <p class="text-sm text-gray-500">Still Life Photography</p>
+                    </div>
+                </div>
+                <!-- Gallery Item 6 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden gallery-image">
+                    <img src="https://images.unsplash.com/photo-1620352528148-18e4c76d2812?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1935&q=80" alt="Architecture" class="w-full h-64 object-cover">
+                    <div class="p-4 text-center">
+                        <h3 class="text-lg font-bold text-gray-900">Modern Architecture</h3>
+                        <p class="text-sm text-gray-500">Architectural Photography</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4 md:px-8">
+            <h2 class="text-4xl font-bold text-center text-gray-900 mb-12">Get in Touch</h2>
+            <div class="max-w-xl mx-auto bg-gray-50 p-8 rounded-lg shadow-lg">
+                <form id="contact-form" class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                        <input type="text" id="name" name="name" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm" required>
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                        <input type="email" id="email" name="email" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm" required>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                        <textarea id="message" name="message" rows="4" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm" required></textarea>
+                    </div>
+                    <div>
+                        <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 text-center">
+        <div class="container mx-auto px-4 md:px-8">
+            <p>&copy; 2024 Nilesh. All rights reserved.</p>
+            <div class="flex justify-center space-x-4 mt-4 text-2xl">
+                <a href="#" class="hover:text-gray-400 transition-colors"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" class="hover:text-gray-400 transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="hover:text-gray-400 transition-colors"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Simple form submission handler
+        const contactForm = document.getElementById('contact-form');
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const message = document.createElement('div');
+            message.textContent = 'Thank you for your message! I will get back to you shortly.';
+            message.className = 'mt-4 p-4 bg-green-100 text-green-800 rounded-lg text-sm text-center';
+            contactForm.appendChild(message);
+            contactForm.reset();
+        });
+
+    </script>
+</body>
+</html>
