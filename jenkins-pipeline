@@ -1,0 +1,25 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Clone the Repo') {
+            steps {
+                git url: "https://github.com/nileshbhurewar/jenkins-webhooks-test-1", branch: "main"
+            }
+        }
+        stage('Deploy Custom Index Page') {
+            steps {
+                sh '''
+                    sudo cp index.html /var/www/html/index.html
+                    sudo systemctl restart nginx
+                '''
+            }
+        }
+    }
+
+    post {
+        always {
+            echo 'Pipeline execution completed.'
+        }
+    }
+}
