@@ -1,2 +1,2 @@
 # jenkins-webhooks-test-1
-this is just testing repo nothing to check
+pipeline for a simple website using GitHub webhooks
