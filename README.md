@@ -23,20 +23,13 @@ Give Jenkins user passwordless sudo access for automation tasks:
 
 sudo visudo
 
-text
-
 Add the following line at the end:
 
 jenkins ALL=(ALL) NOPASSWD: ALL
 
-text
-
 Restart Jenkins to apply changes:
 
 sudo systemctl restart jenkins
-
-text
-
 ## Install Nginx Server
 
 Install Nginx on your server as follows:
