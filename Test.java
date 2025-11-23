@@ -1,5 +1,8 @@
 class Test{
 public static void main(String[]args){
-System.out.println("Java is Javaing");
+String name = "nilesh"
+String name1 = "nilesh1"
+  System.out.println(name);
+  System.out.println(name1);
 }
 }
